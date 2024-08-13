@@ -10,17 +10,16 @@ function Navbar() {
     <>
      <div className='w-full bg-indigo-900 text-white flex justify-center py-4'>
           <div className="container flex justify-between text-lg">
-            <div className='text-2xl font-bold uppercase'>E-Conectar</div>
+            <div className='text-2xl font-bold uppercase'>Blog Pessoal</div>
 
             <div className='flex gap-4'>
-            <Link to='/login' className='hover:underline'>Login</Link>
-            <Link to='/inicio' className='hover:underline'>Inicio</Link>
-            <Link to='/Servicos' className='hover:underline'>Serviços</Link>
-            <div className='hover:underline'>Trabalhadores</div>
-            <div className='hover:underline'>Cadastrar</div>
-            <div className='hover:underline'>Suporte</div>
-            <Link to='/Sobrenos' className='hover:underline'>Sobre nós</Link>
-
+              <Link to='/login' className='hover:underline'>Login</Link>
+              <Link to='/home' className='hover:underline'>Home</Link>
+              <Link to='/servico' className='hover:underline'>Serviços</Link>
+              <Link to='/categoria' className='hover:underline'>Categoria</Link>
+              <Link to='/cadastrocategoria' className='hover:underline'>Cadastrar Categoria</Link>
+              <Link to='/perfil' className='hover:underline'>Perfil</Link>
+              <Link to='/sair' className='hover:underline'>Sair</Link>
             </div>
           </div>
         </div>
