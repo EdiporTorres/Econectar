@@ -5,4 +5,6 @@ export default interface UsuarioLogin {
   foto: string;
   senha: string;
   token: string;
+  dataNascimento: Date;
+  cover: string;
 }

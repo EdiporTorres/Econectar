@@ -824,8 +824,8 @@ binary-extensions@^2.0.0:
   version "0.0.0"
   dependencies:
     axios "^1.7.3"
-    blogpessoal "file:../../../AppData/Local/Yarn/Cache/v6/npm-blogpessoal-0.0.0-6abd41f5-8a83-4c3c-8f9a-5391660e5a9c-1723567217757/node_modules/blogpessoal"
-    econectar "file:../../../AppData/Local/Yarn/Cache/v6/npm-blogpessoal-0.0.0-6abd41f5-8a83-4c3c-8f9a-5391660e5a9c-1723567217757/node_modules/blogpessoal"
+    blogpessoal "file:../../../AppData/Local/Yarn/Cache/v6/npm-blogpessoal-0.0.0-04756675-6a7f-4c50-a3a7-b5e12d4555d6-1724067274302/node_modules/blogpessoal"
+    econectar "file:../../../AppData/Local/Yarn/Cache/v6/npm-blogpessoal-0.0.0-04756675-6a7f-4c50-a3a7-b5e12d4555d6-1724067274302/node_modules/blogpessoal"
     react "^18.3.1"
     react-dom "^18.3.1"
     react-loader-spinner "5.3.4"
@@ -925,6 +925,11 @@ chokidar@^3.5.3:
     readdirp "~3.6.0"
   optionalDependencies:
     fsevents "~2.3.2"
+
+clsx@^2.1.0:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/clsx/-/clsx-2.1.1.tgz#eed397c9fd8bd882bfb18deab7102049a2f32999"
+  integrity sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==
 
 color-convert@^1.9.0:
   version "1.9.3"
@@ -1093,8 +1098,8 @@ eastasianwidth@^0.2.0:
   version "0.0.0"
   dependencies:
     axios "^1.7.3"
-    blogpessoal "file:../../../AppData/Local/Yarn/Cache/v6/npm-econectar-0.0.0-c326f4d4-a7df-4b5f-883b-7993e8257574-1723567217780/node_modules/econectar"
-    econectar "file:../../../AppData/Local/Yarn/Cache/v6/npm-econectar-0.0.0-c326f4d4-a7df-4b5f-883b-7993e8257574-1723567217780/node_modules/econectar"
+    blogpessoal "file:../../../AppData/Local/Yarn/Cache/v6/npm-econectar-0.0.0-4dfafb82-16ed-4122-bb9d-37440216cb0e-1724067274317/node_modules/econectar"
+    econectar "file:../../../AppData/Local/Yarn/Cache/v6/npm-econectar-0.0.0-4dfafb82-16ed-4122-bb9d-37440216cb0e-1724067274317/node_modules/econectar"
     react "^18.3.1"
     react-dom "^18.3.1"
     react-loader-spinner "5.3.4"
@@ -2373,6 +2378,13 @@ react-router@6.26.0:
   integrity sha512-wVQq0/iFYd3iZ9H2l3N3k4PL8EEHcb0XlU2Na8nEwmiXgIUElEH6gaJDtUQxJ+JFzmIXaQjfdpcGWaM6IoQGxg==
   dependencies:
     "@remix-run/router" "1.19.0"
+
+react-toastify@^10.0.5:
+  version "10.0.5"
+  resolved "https://registry.yarnpkg.com/react-toastify/-/react-toastify-10.0.5.tgz#6b8f8386060c5c856239f3036d1e76874ce3bd1e"
+  integrity sha512-mNKt2jBXJg4O7pSdbNUfDdTsK9FIdikfsIE/yUCxbAEXl4HMyJaivrVFcn3Elvt5xvCQYhUZm+hqTIu1UXM3Pw==
+  dependencies:
+    clsx "^2.1.0"
 
 react@^18.3.1:
   version "18.3.1"
