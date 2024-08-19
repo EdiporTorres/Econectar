@@ -73,8 +73,8 @@ function DeletarServico() {
       <div className='border flex flex-col rounded-2xl overflow-hidden justify-between'>
         <header className='py-2 px-6 bg-indigo-600 text-white font-bold text-2xl'>Servico</header>
         <div className="p-4">
-          <p className='text-xl h-full'>{Servico.titulo}</p>
-          <p>{Servico.texto}</p>
+          <p className='text-xl h-full'>{Servico.nomeServico}</p>
+          <p>{Servico.descricao}</p>
         </div>
         <div className="flex">
           <button className='text-slate-100 bg-red-400 hover:bg-red-600 w-full py-2' onClick={retornar}>Não</button>

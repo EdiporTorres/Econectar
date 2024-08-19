@@ -3,9 +3,12 @@ import Usuario from './Usuario';
 
 export default interface Servico {
   id: number;
-  titulo: string;
-  texto: string;
+  nomeServico: string;
+  descricao: string;
+  valor: number;
+  sobreMim: string;
   data: string;
   Categoria: Categoria | null;
-  usuario: Usuario | null;
+  vendedor: Usuario;
+  comprador: null;
 }
