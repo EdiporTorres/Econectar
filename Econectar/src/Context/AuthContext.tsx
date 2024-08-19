@@ -27,7 +27,9 @@ export function AuthProvider({ children }: AuthProviderProps) {
         foto: "",
         dataNascimento: new Date(),
         token: "",
-        cover: ""
+        cover: "",
+        cpf: "",
+        endereco:""
     });
 
     const [isLoading, setIsLoading] = useState(false);
@@ -55,7 +57,9 @@ export function AuthProvider({ children }: AuthProviderProps) {
             foto: "",
             dataNascimento: new Date(),
             token: "",
-            cover : ""
+            cover : "",
+            cpf: "",
+            endereco: ""
         });
     }
 

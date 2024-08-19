@@ -7,4 +7,6 @@ export default interface UsuarioLogin {
   token: string;
   dataNascimento: Date;
   cover: string;
+  cpf: string;
+  endereco: string;
 }

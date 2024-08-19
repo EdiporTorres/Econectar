@@ -1,0 +1,14 @@
+/* Home.css */
+@keyframes changeText {
+    0% { content: "Conomia"; }
+    33% { content: "Cologia"; }
+    66% { content: "Conectar"; }
+    100% { content: "Conectar"; }
+  }
+  
+  .change-text::after {
+    content: "conomia"; /* Initial text */
+    display: inline-block;
+    animation: changeText 6s infinite;
+  }
+  

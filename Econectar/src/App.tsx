@@ -13,6 +13,9 @@ import FormularioCategoria from './Components/Categoria/FormularioCategoria';
 import DeletarCategoria from './Components/Categoria/DeletarCategoria';
 import { AuthProvider } from './Context/AuthContext';
 import Perfil from './Pages/Perfil/Perfil';
+import DeletarServico from './Components/Servico/DeletarServico';
+import FormularioServico from './Components/Servico/FormularioServico';
+import ListaServico from './Components/Servico/ListaServico';
 
 function App() {
   return (
@@ -32,6 +35,10 @@ function App() {
               <Route path="/editarcategoria/:id" element={<FormularioCategoria />} />
               <Route path="/deletarcategoria/:id" element={<DeletarCategoria />} />
               <Route path = "/perfil" element = {<Perfil />} />
+              <Route path="/servico" element={<ListaServico />} />
+              <Route path="/cadastroservico" element={<FormularioServico  />} />
+              <Route path="/editarservico/:id" element={<FormularioServico />} />
+              <Route path="/deletarservico/:id" element={<DeletarServico/>} />
             </Routes>
           </div>
           <Footer />
