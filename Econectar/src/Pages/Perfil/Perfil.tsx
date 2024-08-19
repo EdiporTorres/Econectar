@@ -76,7 +76,7 @@ function Perfil() {
             <div className="relative mt-[-6rem] h-72 flex flex-col bg-sky-500 text-white text-2xl items-center justify-center z-0">
                 <p>Nome: {usuario.nome}</p>
                 <p>Email: {usuario.usuario}</p>
-                <p>Data de Nascimento: {new Date(usuario.dataNascimento).toLocaleDateString()}</p>
+              
                
 
             </div>
