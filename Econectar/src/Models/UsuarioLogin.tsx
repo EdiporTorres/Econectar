@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
 
-interface UsuarioLogin {
+export interface UsuarioLogin {
   id: number;
   usuario: string;
   nome: string;
   senha: string;
   endereco: string;
   cpf: string;
-  dataNascimento: Date;
+  dataNascimento: string;
   foto: string;
   servicosVendidos: string[];
   servicosComprados: string[];
+  token: string;
+  cover: string;
+  
+  
 }
 
 const UsuarioLoginForm: React.FC = () => {
@@ -21,18 +25,21 @@ const UsuarioLoginForm: React.FC = () => {
     senha: '',
     endereco: '',
     cpf: '',
-    dataNascimento: new Date(),
+    dataNascimento: '',
     foto: '',
     servicosVendidos: [],
-    servicosComprados: []
+    servicosComprados: [],
+    token: '',
+    cover: ''
   });
 
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setUsuario({
-      ...usuario,
-      [event.target.name]: event.target.value
-    });
-  };
+    const { name, value } = event.target;
+    setUsuario((prevState) => ({
+        ...prevState,
+        [name]: [value] // Colocando o valor dentro de um array para `servicosVendidos`
+    }));
+};
 
   return (
     <form>
@@ -45,3 +52,4 @@ const UsuarioLoginForm: React.FC = () => {
 };
 
 export default UsuarioLoginForm;
+ 

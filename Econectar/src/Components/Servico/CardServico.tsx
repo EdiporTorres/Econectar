@@ -11,12 +11,12 @@ function CardServico({serv}: CardServicoProps) {
     <div className='border-slate-900 border flex flex-col rounded overflow-hidden justify-between'>
       <div>
         <div className="flex w-full  bg-slate-400 py-2 px-4 items-center gap-4">
-          <img src={serv.usuario?.foto} className='h-12 rounded-full' alt="FOTO VEM AQUI" />
-          <h3 className='text-lg font-bold text-center uppercase text-red-300 '>{serv.usuario?.nome}</h3>
+          <img src={serv.vendedor?.foto} className='h-12 rounded-full' alt="FOTO VEM AQUI" />
+          <h3 className='text-lg font-bold text-center uppercase text-red-300 '>{serv.vendedor?.nome}</h3>
         </div>
         <div className='p-4 bg-sky-50 '>
-          <h4 className='text-lg font-semibold uppercase'>{serv.titulo}</h4>
-          <p>{serv.texto}</p>
+          <h4 className='text-lg font-semibold uppercase'>{serv.nomeServico}</h4>
+          <p>{serv.descricao}</p>
           <p>Categoria: {serv.Categoria?.descricao}</p>
           <p>Data: {new Intl.DateTimeFormat(undefined, {
                     dateStyle: 'full',

@@ -5,14 +5,25 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import { RotatingLines } from 'react-loader-spinner';
 import { AuthContext } from '../../Context/AuthContext';
-import UsuarioLogin from '../../Models/UsuarioLogin';
+import { UsuarioLogin} from '../../Models/UsuarioLogin';
 
 function Login() {
     let navigate = useNavigate();
   
-    const [usuarioLogin, setUsuarioLogin] = useState<UsuarioLogin>(
-      {} as UsuarioLogin
-    );
+    const [usuarioLogin, setUsuarioLogin] = useState<UsuarioLogin>({
+      id: 0,
+      nome: '',
+      usuario: '',
+      foto: '',
+      senha: '',
+      token: '',
+      cover: '',
+      cpf: '',
+      endereco: '',
+      dataNascimento: '',
+      servicosVendidos: [],
+      servicosComprados: []
+    });
   
     const { usuario, handleLogin } = useContext(AuthContext);
   
@@ -20,6 +31,7 @@ function Login() {
   
     useEffect(() => {
       if (usuario.token !== "") {
+        
           navigate('/home')
       }
   }, [usuario])
@@ -40,7 +52,7 @@ function Login() {
       <>
         <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold ">
           <form className="flex justify-center items-center flex-col w-1/2 gap-4" onSubmit={login}>
-            <h2 className="text-slate-900 text-5xl ">Entrar</h2>
+            <h2 className=" text-5xl text-white ">Entrar</h2>
             <div className="flex flex-col w-full">
               <label htmlFor="usuario">Usuário</label>
               <input

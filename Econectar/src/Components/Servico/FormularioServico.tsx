@@ -3,6 +3,8 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthContext';
 import Categoria from '../../Models/Categoria';
 import { atualizar, buscar, cadastrar } from '../../Service/Services';
+import { UsuarioLogin } from '../../Models/UsuarioLogin'; // Import the correct type for UsuarioLogin
+
 
 function FormularioServico() {
   let navigate = useNavigate();
@@ -20,6 +22,7 @@ function FormularioServico() {
     descricao: '',
   });
 
+  
   const [servico, setServico] = useState({
     id: 0,
     nomeServico: '',
@@ -27,18 +30,7 @@ function FormularioServico() {
     valor: 0,
     sobreMim: '',
     status: '',
-    vendedor: {
-      id: 0,
-      usuario: '',
-      nome: '',
-      senha: '',
-      endereco: '',
-      cpf: '',
-      dataNascimento: '',
-      foto: '',
-      servicosVendidos: [],
-      servicosComprados: [],
-    },
+    vendedor: {} as UsuarioLogin, // Update the type of vendedor to UsuarioLogin
     comprador: null,
     categoria: {
       id: 0,
@@ -55,15 +47,14 @@ function FormularioServico() {
     });
   }
 
-  const buscarCategoriaPorId = (id: string) => {
-    const categoriaSelecionada = categorias.find((categoria) => categoria.id === Number(id));
-    if (categoriaSelecionada) {
-      setServico((prevServico) => ({
-        ...prevServico,
-        categoria: categoriaSelecionada,
-      }));
-    }
-  };
+  async function buscarCategoriaPorId(id: string) {
+    await buscar(`/categorias/${id}`, setCategoria, {
+      headers: {
+        Authorization: token,
+      },
+    });
+  }
+
 
   async function buscarCategorias() {
     await buscar('/categorias', setCategorias, {
@@ -160,9 +151,11 @@ function FormularioServico() {
     } else {
       try {
         await cadastrar(`/servico`, dadosServico, setServico, {
-          Authorization: token,
+          headers: {
+            Authorization: token,
+          },
         });
-  
+
         alert('Servico cadastrado com sucesso');
         retornar();
       } catch (error: any) {
