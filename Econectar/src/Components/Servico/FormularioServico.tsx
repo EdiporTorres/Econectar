@@ -96,7 +96,7 @@ function FormularioServico() {
   }
 
   function retornar() {
-    navigate('/servicos');
+    navigate('/servico');
   }
 
   async function gerarNovoServico(e: ChangeEvent<HTMLFormElement>) {
