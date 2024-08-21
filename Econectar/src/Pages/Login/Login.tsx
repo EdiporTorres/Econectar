@@ -94,7 +94,6 @@ function Login() {
           </Link>
         </p>
       </form>
-      <div className="fundoLogin hidden lg:block"></div>
     </div>
   );
 }
