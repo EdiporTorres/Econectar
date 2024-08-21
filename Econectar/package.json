@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.1.7",
     "axios": "^1.7.3",
     "blogpessoal": "file:",
     "econectar": "file:",
