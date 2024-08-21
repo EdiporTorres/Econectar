@@ -27,7 +27,6 @@
 /* Sobre */
 .sobre {
   background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255,255,255,0.85)), url(../../assets/fundo.png);
-  background-color:;
   background-size: cover;
   background-position: center;
   position: relative; /* Necessário para o pseudo-elemento */

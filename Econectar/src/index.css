@@ -6,5 +6,10 @@ html, body, #root {
     height: 100%;
     margin: 0;
     padding: 0;
+    width: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255,255,255,0.85)), url(./assets/fundo.png);
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Necessário para o pseudo-elemento */
   }
   
