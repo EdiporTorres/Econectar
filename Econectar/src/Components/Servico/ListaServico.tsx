@@ -16,25 +16,13 @@ function ListaServico() {
   const { usuario, handleLogout } = useContext(AuthContext);
   const token = usuario.token;
 
-  useEffect(() => {
-    if (token === '') {
-      alert('Você precisa estar logado');
-      navigate('/');
-    }
-  }, [token]);
-
   async function buscarServico() {
     try {
-      const resultado = await buscar('/servico', setServico, {
+       await buscar('/servico', setServico, {
         headers: {
           Authorization: token,
         },
       });
-      if (Array.isArray(resultado)) {
-        setServico(resultado);
-      } else {
-        setServico([]); // Define um array vazio se a resposta não for um array
-      }
     } catch (error: any) {
       if (error.toString().includes('403')) {
         alert('O token expirou, favor logar novamente')
@@ -42,6 +30,13 @@ function ListaServico() {
       }
     }
   }
+
+   useEffect(() => {
+    if (token === '') {
+      alert('Você precisa estar logado');
+      navigate('/');
+    }
+  }, [token]);
 
   useEffect(() => {
     buscarServico();

@@ -9,6 +9,6 @@ export default interface Servico {
   sobreMim: string;
   data: string;
   Categoria: Categoria | null;
-  vendedor: Usuario;
-  comprador: null;
+  vendedor: Usuario | null;
+  comprador: Usuario | null;
 }
