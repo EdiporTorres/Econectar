@@ -5,7 +5,7 @@ import Servico from '../../Models/Servico';
 import { AuthContext } from '../../Context/AuthContext';
 import { buscar } from '../../Service/Services';
 import CardServico from './CardServico';
-
+import { toastAlerta } from '../../Util/Toastalert';
 
 
 function ListaServico() {
@@ -31,12 +31,12 @@ function ListaServico() {
     }
   }
 
-   useEffect(() => {
-    if (token === '') {
-      alert('Você precisa estar logado');
-      navigate('/');
+  useEffect(() => {
+    if (usuario.token === '') {
+        toastAlerta ('Faça login para ver os serviços disponiveis!.', 'erro')
+        navigate('/home');
     }
-  }, [token]);
+}, [usuario.token, navigate]);
 
   useEffect(() => {
     buscarServico();

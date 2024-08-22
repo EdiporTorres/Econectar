@@ -58,6 +58,9 @@ function Cadastro() {
 
         if (confirmaSenha === usuario.senha && usuario.senha.length >= 8) {
             try {
+                if(usuario.foto == "" || usuario.foto == null){
+                    usuario.foto = "https://media.discordapp.net/attachments/1255176758466969620/1275521477894078706/E-_Conectar.png?ex=66c82bb2&is=66c6da32&hm=c870de1b2f1e9394f50660d99a977a4e2048eb848f8417b023256916780a3704&=&format=webp&quality=lossless&width=449&height=449"
+                }
                 await cadastrarUsuario(`/usuarios/cadastrar`, usuario, setUsuarioResposta);
                 alert('Usuário cadastrado com sucesso');
             } catch (error) {
