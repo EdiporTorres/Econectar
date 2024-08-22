@@ -30,11 +30,11 @@
     }
 
     useEffect(() => {
-      if (token === '') {
-        toastAlerta('Você precisa estar logado', 'info');
+      if (usuario.token === '') {
+        toastAlerta('Faça login para ver os serviços disponiveis!.', 'erro')
         navigate('/login');
       }
-    }, [token]);
+    }, [usuario.token, navigate]);
 
     useEffect(() => {
       buscarCategorias();

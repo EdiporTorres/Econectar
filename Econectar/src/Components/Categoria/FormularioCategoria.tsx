@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import Categoria from '../../Models/Categoria';
 import { AuthContext } from '../../Context/AuthContext';
 import { atualizar, buscar, cadastrar } from '../../Service/Services';
+import { toastAlerta } from '../../Util/Toastalert';
 
 function FormularioCategoria() {
   const [categoria, setCategoria] = useState<Categoria>({} as Categoria);
@@ -63,11 +64,11 @@ function FormularioCategoria() {
   }
 
   useEffect(() => {
-    if (token === '') {
-      alert('Você precisa estar logado');
+    if (usuario.token === '') {
+      toastAlerta('Faça login para ver os serviços disponiveis!.', 'erro')
       navigate('/login');
     }
-  }, [token]);
+  }, [usuario.token, navigate]);
 
   return (
     <div className="container flex flex-col items-center justify-center mx-auto">

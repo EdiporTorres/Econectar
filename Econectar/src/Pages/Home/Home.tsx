@@ -56,7 +56,7 @@ function Home() {
 
         <div className="md:w-2/3 w-full text-center md:text-left px-4">
         <h2 className='text-center txt-sobre'>Sobre</h2>
-          <p>
+          <p className='sobretxt text-stroke text-center'>
           A E-conectar é um marketplace inovador que reúne serviços sustentáveis, alinhado com o Objetivo de Desenvolvimento Sustentável 11 (ODS 11) da ONU, que visa tornar cidades e comunidades mais inclusivas, seguras, resilientes e sustentáveis. Na E-conectar, acreditamos que a sustentabilidade é o caminho para o futuro, e por isso, conectamos consumidores conscientes a prestadores de serviços comprometidos com práticas ecológicas. Nossa plataforma oferece uma ampla gama de serviços que promovem a eficiência energética, a mobilidade sustentável, a gestão de resíduos e o consumo responsável, ajudando a construir um ambiente urbano mais equilibrado e sustentável para todos.
           </p>
         </div>

@@ -4,6 +4,7 @@ import { FaShoppingCart, FaSignOutAlt, FaUser } from 'react-icons/fa';
 import { AuthContext } from '../../Context/AuthContext';
 import { toastAlerta } from '../../Util/Toastalert';
 import logo from '../../assets/logo.png';
+import './NavBar.css';
 
 function Navbar() {
   const { handleLogout } = useContext(AuthContext);
@@ -26,7 +27,7 @@ function Navbar() {
         </div>
 
         {/* Navigation Links */}
-        <div className='flex gap-6 items-center'>
+        <div className='flex gap-6 items-center fontcustom'>
           <Link to='/home' className='hover:bg-indigo-700 px-4 py-2 rounded transition duration-300'>Home</Link>
           <Link to='/servico' className='hover:bg-indigo-700 px-4 py-2 rounded transition duration-300'>Serviços</Link>
           <Link to='/categoria' className='hover:bg-indigo-700 px-4 py-2 rounded transition duration-300'>Categoria</Link>

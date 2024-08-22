@@ -1,3 +1,8 @@
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kumbh+Sans:wght@100..900&display=swap');
+
+/* Background home */
+
 .bghome1 {
   background: linear-gradient(rgba(118, 134, 184, 0.85), rgba(118,134,184,0.85)), url(../../assets/bghome.png);
   width: 100%;
@@ -34,5 +39,23 @@
 
 .txt-sobre {
   color: #179BAE;
-  font-size: 60px;
+  font-size: 79px;
+  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.35);
+  font-family: "Kumbh Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sobretxt {
+  font-family: "Kumbh Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.text-stroke {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #5a5353;
+  color: #000; /* Preenchimento da letra */
 }

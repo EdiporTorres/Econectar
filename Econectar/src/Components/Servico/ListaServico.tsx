@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
-import { Dna } from 'react-loader-spinner';
+import { MagnifyingGlass } from 'react-loader-spinner';
 import { useNavigate } from 'react-router-dom';
 import Servico from '../../Models/Servico';
 import { AuthContext } from '../../Context/AuthContext';
@@ -45,13 +45,15 @@ function ListaServico() {
   return (
     <>
       {servico.length === 0 && (
-        <Dna
-          visible={true}
-          height="200"
-          width="200"
-          ariaLabel="dna-loading"
-          wrapperStyle={{}}
-          wrapperClass="dna-wrapper mx-auto"
+        <MagnifyingGlass
+        visible={true}
+        height="140"
+        width="140"
+        ariaLabel="magnifying-glass-loading"
+        wrapperStyle={{}}
+        wrapperClass="magnifying-glass-wrapper mx-auto"
+        glassColor="#c0efff"
+        color="#e15b64"
         />
       )}
       <div className='text-center flex justify-center'><img src={LogoEconectar} alt="" /></div>
