@@ -1,4 +1,4 @@
-import  { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Dna } from 'react-loader-spinner';
 import { useNavigate } from 'react-router-dom';
 import Servico from '../../Models/Servico';
@@ -7,6 +7,7 @@ import { buscar } from '../../Service/Services';
 import CardServico from './CardServico';
 import LogoEconectar from '../../assets/LogoEconectar.png';
 import ModalServico from '../../Components/Servico/ModalServico';
+import { toastAlerta } from '../../Util/Toastalert';
 
 function ListaServico() {
   const [servico, setServico] = useState<Servico[]>([]);
@@ -18,7 +19,7 @@ function ListaServico() {
 
   async function buscarServico() {
     try {
-       await buscar('/servico', setServico, {
+      await buscar('/servico', setServico, {
         headers: {
           Authorization: token,
         },
@@ -31,12 +32,12 @@ function ListaServico() {
     }
   }
 
-   useEffect(() => {
-    if (token === '') {
-      alert('Você precisa estar logado');
-      navigate('/');
+  useEffect(() => {
+    if (usuario.token === '') {
+      toastAlerta('Faça login para ver os serviços disponiveis!.', 'erro')
+      navigate('/home');
     }
-  }, [token]);
+  }, [usuario.token, navigate]);
 
   useEffect(() => {
     buscarServico();
