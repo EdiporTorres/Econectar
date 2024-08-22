@@ -72,7 +72,7 @@ function Cadastro() {
 
     return (
         <>
-            <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold">
+            <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold bgcadastro">
                 <div className="fundoCadastro hidden lg:block"></div>
                 <form className='flex justify-center items-center flex-col w-2/3 gap-3' onSubmit={cadastrarNovoUsuario}>
                     <h2 className='text-slate-900 text-5xl'>Cadastrar</h2>

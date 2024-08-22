@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { FaShoppingCart, FaSignOutAlt, FaUser } from 'react-icons/fa';
 import { AuthContext } from '../../Context/AuthContext';
 import { toastAlerta } from '../../Util/Toastalert';
+import logo from '../../assets/logo.png';
 
 function Navbar() {
   const { handleLogout } = useContext(AuthContext);
@@ -15,11 +16,13 @@ function Navbar() {
   };
 
   return (
-    <nav className='w-full bg-indigo-900 text-white'>
+    <nav className='w-full bg-orange-600 text-white'>
       <div className='container mx-auto flex justify-between items-center py-4 px-6'>
         {/* Logo */}
         <div className='text-2xl font-bold uppercase'>
-          <Link to='/'>E-Conectar</Link>
+          <Link to='/'>
+            <img src={logo} alt='Logo' className='h-10' />
+          </Link>
         </div>
 
         {/* Navigation Links */}
