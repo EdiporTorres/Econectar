@@ -10,14 +10,11 @@ function CardServico({serv}: CardServicoProps) {
   return (
     <div className='border-2 border-blue-500 border-solid flex flex-col rounded-2xl overflow-hidden justify-between'>
       <div>
-        <div className="flex w-full bg-white py-2 px-4 items-center gap-4 bgteste">
-          <img src={serv.vendedor?.foto} className='h-12 rounded-full' alt="FOTO VEM AQUI" />
-          <h3 className='text-lg font-bold text-center uppercase text-red-300 '>{serv.vendedor?.nome}</h3>
-        </div>
         <div className='p-4 bg-white'>
           <h4 className='text-lg font-semibold uppercase'>{serv.nomeServico}</h4>
           <p>{serv.descricao}</p>
-          <p>Categoria: {serv.Categoria?.descricao}</p>
+          <p>Categoria: {serv.Categoria?.nomeCategoria}</p>
+          <p>Valor: {serv.valor.toFixed(2)}</p>
         </div>
       </div>
       <div className="flex">
