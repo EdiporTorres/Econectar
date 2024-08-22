@@ -10,5 +10,4 @@ export default interface Servico {
   data: string;
   Categoria: Categoria | null;
   vendedor: Usuario | null;
-  comprador: null;
-}
+  comprador: Usuario | null;

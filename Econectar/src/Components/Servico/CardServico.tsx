@@ -18,10 +18,6 @@ function CardServico({serv}: CardServicoProps) {
           <h4 className='text-lg font-semibold uppercase'>{serv.nomeServico}</h4>
           <p>{serv.descricao}</p>
           <p>Categoria: {serv.Categoria?.descricao}</p>
-          <p>Data: {new Intl.DateTimeFormat(undefined, {
-                    dateStyle: 'full',
-                    timeStyle: 'medium',
-                  }).format(new Date(serv.data))}</p>
         </div>
       </div>
       <div className="flex">
