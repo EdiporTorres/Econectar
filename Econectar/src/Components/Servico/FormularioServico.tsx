@@ -99,7 +99,7 @@ function FormularioServico() {
     navigate('/servico');
   }
 
-  async function gerarNovoServico(e: ChangeEvent<HTMLFormElement>) {
+   async function gerarNovoServico(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
   
     // Construa o objeto JSON conforme o formato esperado
@@ -132,45 +132,46 @@ function FormularioServico() {
   
     console.log('Dados do serviço:', dadosServico); // Adicione este log para verificar os dados
   
-    if (id != undefined) {
-      try {
-        await atualizar(`/servico`, dadosServico, setServico, {
-          headers:
-          { 'Authorization': token, },
+    try {
+      if (id != undefined) {
+        await atualizar(`/servico/atualizar`, dadosServico, setServico, {
+          headers: {
+            Authorization: token,
+          },
         });
         alert('Servico atualizado com sucesso');
-        retornar();
-      } catch (error: any) {
-        console.error('Erro ao atualizar o serviço:', error.response ? error.response.data : error.message); // Adicione este log para verificar o erro
-        if (error.toString().includes('403')) {
-          alert('O token expirou, favor logar novamente');
-          handleLogout();
-        } else {
-          alert('Erro ao atualizar o Servico');
-        }
-      }
-    } else {
-      try {
+      } else {
         await cadastrar(`/servico`, dadosServico, setServico, {
           headers: {
             Authorization: token,
           },
         });
-
         alert('Servico cadastrado com sucesso');
-        retornar();
-      } catch (error: any) {
-        console.error('Erro ao cadastrar o serviço:', error.response ? error.response.data : error.message); // Adicione este log para verificar o erro
-        if (error.toString().includes('403')) {
+      }
+      retornar();
+    } catch (error: any) {
+      console.error('Erro ao cadastrar/atualizar o serviço:', error);
+      if (error.response) {
+        // The request was made and the server responded with a status code
+        // that falls out of the range of 2xx
+        console.error('Erro ao cadastrar/atualizar o serviço:', error.response.data);
+        if (error.response.status === 401) {
           alert('O token expirou, favor logar novamente');
           handleLogout();
         } else {
-          alert('Erro ao cadastrar o Servico');
+          alert('Erro ao cadastrar/atualizar o Servico');
         }
+      } else if (error.request) {
+        // The request was made but no response was received
+        console.error('Erro ao cadastrar/atualizar o serviço: Sem resposta do servidor', error.request);
+        alert('Erro ao cadastrar/atualizar o Servico: Sem resposta do servidor');
+      } else {
+        // Something happened in setting up the request that triggered an Error
+        console.error('Erro ao cadastrar/atualizar o serviço:', error.message);
+        alert('Erro ao cadastrar/atualizar o Servico');
       }
     }
   }
-
   const carregandoCategoria = categoria.descricao === '';
 
   return (
