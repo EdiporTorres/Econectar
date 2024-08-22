@@ -135,7 +135,8 @@ function FormularioServico() {
     if (id != undefined) {
       try {
         await atualizar(`/servico`, dadosServico, setServico, {
-          Authorization: token,
+          headers:
+          { 'Authorization': token, },
         });
         alert('Servico atualizado com sucesso');
         retornar();
@@ -227,20 +228,12 @@ function FormularioServico() {
         </div>
         <div className="flex flex-col gap-2">
           <p>Categoria do Servico</p>
-          <select
-            name="categoria"
-            id="categoria"
-            className="border p-2 border-slate-800 rounded"
-            value={servico.categoria.id}
-            onChange={(e) => buscarCategoriaPorId(e.currentTarget.value)}
-          >
-            <option value="" disabled>
-              Selecione uma Categoria
-            </option>
-            {Array.isArray(categorias) && categorias.map((categoria) => (
-              <option key={categoria.id} value={categoria.id}>
-                {categoria.descricao}
-              </option>
+          <select name="categorias" id="categorias" className='border p-2 border-slate-800 rounded' onChange={(e) => buscarCategoriaPorId(e.currentTarget.value)}>
+            <option value="" selected disabled>Selecione uma categoria</option>
+            {categorias.map((categoria) => (
+              <>
+                <option value={categoria.id} >{categoria.descricao}</option>
+              </>
             ))}
           </select>
         </div>
