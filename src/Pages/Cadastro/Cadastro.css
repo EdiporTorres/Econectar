@@ -1,0 +1,13 @@
+.bg-cadastro {
+    /* COlocar Imagem de fundo : background-image: url(../../assets/cadastro.jpg); */
+      background-color: rgba(255, 255, 255, 0.85);
+  }
+
+  .box-cadastro{
+    width: 80%;
+  }
+
+  .alinhamento{
+    width: 20%;
+  }
+
