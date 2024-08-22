@@ -5,8 +5,8 @@ import Servico from '../../Models/Servico';
 import { AuthContext } from '../../Context/AuthContext';
 import { buscar } from '../../Service/Services';
 import CardServico from './CardServico';
-
-
+import LogoEconectar from '../../assets/LogoEconectar.png';
+import ModalServico from '../../Components/Servico/ModalServico';
 
 function ListaServico() {
   const [servico, setServico] = useState<Servico[]>([]);
@@ -53,6 +53,8 @@ function ListaServico() {
           wrapperClass="dna-wrapper mx-auto"
         />
       )}
+      <div className='text-center flex justify-center'><img src={LogoEconectar} alt="" /></div>
+      <div className='text-center flex justify-center'>      <ModalServico /></div>
       <div className='container mx-auto my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
         {servico.map((servico) => (
           <CardServico key={servico.id} serv={servico} />

@@ -6,6 +6,7 @@
   import CardCategorias from './CardCategoria';
   import { buscar } from '../../Service/Services';
   import { toastAlerta } from '../../Util/Toastalert';
+  import LogoEconectar from '../../assets/LogoEconectar.png';
 
   function ListaCategorias() {
     const [categorias, setCategorias] = useState<Categoria[]>([]);
@@ -51,6 +52,7 @@
             wrapperClass="dna-wrapper mx-auto"
           />
         )}
+        <div className='text-center flex justify-center'><img src={LogoEconectar} alt="" /></div>
         <div className="flex justify-center w-full my-4">
           <div className="container flex flex-col">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

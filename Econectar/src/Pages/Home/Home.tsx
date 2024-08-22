@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css';
-import ModalServico from '../../Components/Servico/ModalServico';
 import ListaServico from '../../Components/Servico/ListaServico';
 import LogoPerry from '../../assets/PerryEconectar.png';
 
@@ -47,7 +46,6 @@ function Home() {
           </div>
         </div>
       </div>
-      <ModalServico />
       <ListaServico />
       {/* Seção Sobre Nós */}
       <div className="sobre flex flex-col md:flex-row items-center justify-center py-8 px-4 bg-opacity-75 bg-cover">
