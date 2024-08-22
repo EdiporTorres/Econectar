@@ -11,4 +11,3 @@ export default interface Servico {
   Categoria: Categoria | null;
   vendedor: Usuario | null;
   comprador: Usuario | null;
-}

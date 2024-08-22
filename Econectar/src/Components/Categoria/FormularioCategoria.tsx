@@ -71,11 +71,11 @@ function FormularioCategoria() {
 
   return (
     <div className="container flex flex-col items-center justify-center mx-auto">
-      <h1 className="text-4xl text-center my-8 text-white">
+      <h1 className="text-4xl text-center my-8 text-dark">
         {id === undefined ? 'Cadastre uma nova categoria' : 'Editar categoria'}
       </h1>
       <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovaCategoria}>
-        <div className="flex flex-col gap-2 text-white">
+        <div className="flex flex-col gap-2 text-dark">
           <label htmlFor="nomeCategoria">Nome da categoria</label>
           <input
             type="text"
@@ -86,7 +86,7 @@ function FormularioCategoria() {
             onChange={atualizarEstado}
           />
         </div>
-        <div className="flex flex-col gap-2 text-white">
+        <div className="flex flex-col gap-2 text-dark">
           <label htmlFor="descricao">Descrição da categoria</label>
           <input
             type="text"
