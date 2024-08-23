@@ -75,7 +75,7 @@ function Cadastro() {
 
     return (
         <>
-        <div className="grid grid-cols-1 h-screen place-items-center font-bold bg-custom flex justify-center items-center min-h-screen">
+        <div className="grid grid-cols-1 h-screen place-items-center font-bold bg-custom justify-center items-center min-h-screen">
             <div className="bg-cadastro box-cadastro p-8 rounded-lg shadow-lg">
                 <form id="cadastroForm" onSubmit={cadastrarNovoUsuario}>
                 <h2 className="text-2xl font-bold text-center text-indigo-700 mb-8">Cadastro</h2>
