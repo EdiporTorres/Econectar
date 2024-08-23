@@ -83,7 +83,7 @@ function Login() {
               visible={true}
             />
           ) : (
-            <span>Entrar</span>
+            <span className='text-white'>Entrar</span>
           )}
         </button>
         <hr className="border-slate-800 w-full" />

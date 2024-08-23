@@ -53,7 +53,7 @@ function ListaServico() {
         wrapperStyle={{}}
         wrapperClass="magnifying-glass-wrapper mx-auto"
         glassColor="#c0efff"
-        color="#e15b64"
+        color="#EA580C"
         />
       )}
       <div className='text-center flex justify-center'><img src={LogoEconectar} alt="" /></div>

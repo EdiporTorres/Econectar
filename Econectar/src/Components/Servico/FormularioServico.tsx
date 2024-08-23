@@ -216,7 +216,7 @@ function FormularioServico() {
           />
         </div>
         <div className="flex flex-col gap-2">
-          <label htmlFor="sobreMim">Sobre o Vendedor: </label>
+          <label htmlFor="sobreMim">Sobre o mim: </label>
           <input
             value={servico.sobreMim}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
@@ -233,7 +233,7 @@ function FormularioServico() {
             <option value="" selected disabled>Selecione uma categoria</option>
             {categorias.map((categoria) => (
               <>
-                <option value={categoria.id} >{categoria.descricao}</option>
+                <option value={categoria.id} >{categoria.nomeCategoria}</option>
               </>
             ))}
           </select>

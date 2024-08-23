@@ -830,8 +830,8 @@ binary-extensions@^2.0.0:
   dependencies:
     "@phosphor-icons/react" "^2.1.7"
     axios "^1.7.3"
-    blogpessoal "file:../../../../../../../../AppData/Local/Yarn/Cache/v6/npm-blogpessoal-0.0.0-a45d1e72-ccce-4400-8926-c02f68fcc8d9-1724374946421/node_modules/blogpessoal"
-    econectar "file:../../../../../../../../AppData/Local/Yarn/Cache/v6/npm-blogpessoal-0.0.0-a45d1e72-ccce-4400-8926-c02f68fcc8d9-1724374946421/node_modules/blogpessoal"
+    blogpessoal "file:../../../../../../../../AppData/Local/Yarn/Cache/v6/npm-blogpessoal-0.0.0-57a58b20-39c0-4e65-bc89-d33190fa59f2-1724377300518/node_modules/blogpessoal"
+    econectar "file:../../../../../../../../AppData/Local/Yarn/Cache/v6/npm-blogpessoal-0.0.0-57a58b20-39c0-4e65-bc89-d33190fa59f2-1724377300518/node_modules/blogpessoal"
     react "^18.3.1"
     react-dom "^18.3.1"
     react-icons "^5.3.0"
@@ -1108,8 +1108,8 @@ eastasianwidth@^0.2.0:
   dependencies:
     "@phosphor-icons/react" "^2.1.7"
     axios "^1.7.3"
-    blogpessoal "file:../../../../../../../../AppData/Local/Yarn/Cache/v6/npm-econectar-0.0.0-b865bea0-050d-4c24-844c-9693ac5bd53f-1724374946436/node_modules/econectar"
-    econectar "file:../../../../../../../../AppData/Local/Yarn/Cache/v6/npm-econectar-0.0.0-b865bea0-050d-4c24-844c-9693ac5bd53f-1724374946436/node_modules/econectar"
+    blogpessoal "file:../../../../../../../../AppData/Local/Yarn/Cache/v6/npm-econectar-0.0.0-0d5233c2-43bb-4ba6-87fd-7cb517bebe21-1724377300536/node_modules/econectar"
+    econectar "file:../../../../../../../../AppData/Local/Yarn/Cache/v6/npm-econectar-0.0.0-0d5233c2-43bb-4ba6-87fd-7cb517bebe21-1724377300536/node_modules/econectar"
     react "^18.3.1"
     react-dom "^18.3.1"
     react-icons "^5.3.0"
