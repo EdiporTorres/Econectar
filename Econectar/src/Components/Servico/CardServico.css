@@ -1,0 +1,34 @@
+.card-servico {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #1E3A8A; /* Cor azul personalizada */
+    border-radius: 12px; /* Borda arredondada */
+    overflow: hidden;
+    background-color: white; /* Fundo branco para o card */
+  }
+  
+  .card-servico-content {
+    padding: 16px;
+    flex: 1; /* Faz o conteúdo ocupar o espaço disponível */
+  }
+  
+  .card-servico-footer {
+    display: flex;
+    border-top: 1px solid #1E3A8A; /* Linha de separação */
+  }
+  
+  .card-servico-footer a {
+    flex: 1;
+    text-align: center;
+    padding: 8px;
+    color: white;
+  }
+  
+  .card-servico-footer .edit-button {
+    background-color: #F97316; /* Cor laranja personalizada */
+  }
+  
+  .card-servico-footer .delete-button {
+    background-color: #DC2626; /* Cor vermelha personalizada */
+  }
+  
