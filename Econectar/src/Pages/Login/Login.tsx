@@ -73,7 +73,7 @@ function Login() {
             required
           />
         </div>
-        <button type="submit" className="rounded bg-indigo-600 hover:bg-indigo-600 text-white w-full py-2 flex justify-center items-center">
+        <button type="submit" className="rounded bg-indigo-600 hover:bg-indigo-800 text-white w-full py-2 flex justify-center items-center">
           {isLoading ? (
             <RotatingLines
               strokeColor="white"
