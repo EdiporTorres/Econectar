@@ -34,6 +34,10 @@ button {
   transition: background-color 0.3s;
 } 
 
+button:hover {
+  background-color: #3228a1; /* Cor do botão ao passar o mouse */
+}
+
 button:disabled {
   background-color: #9ca3af; /* Cor do botão quando desabilitado */
   cursor: not-allowed;

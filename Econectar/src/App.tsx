@@ -20,10 +20,10 @@ import ListaServico from './Components/Servico/ListaServico';
 function App() {
   return (
     <>
-      <AuthProvider>
-        <BrowserRouter>
-          <ToastContainer />
-          <NavBar />
+     <AuthProvider>
+    <BrowserRouter>
+    <ToastContainer />
+        <NavBar />
           <div className='min-h-[80vh]'>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -34,18 +34,18 @@ function App() {
               <Route path="/cadastrocategoria" element={<FormularioCategoria />} />
               <Route path="/editarcategoria/:id" element={<FormularioCategoria />} />
               <Route path="/deletarcategoria/:id" element={<DeletarCategoria />} />
-              <Route path="/perfil" element={<Perfil />} />
+              <Route path = "/perfil" element = {<Perfil />} />
               <Route path="/servico" element={<ListaServico />} />
-              <Route path="/cadastroservico" element={<FormularioServico />} />
+              <Route path="/cadastroservico" element={<FormularioServico  />} />
               <Route path="/editarservico/:id" element={<FormularioServico />} />
-              <Route path="/deletarservico/:id" element={<DeletarServico />} />
+              <Route path="/deletarservico/:id" element={<DeletarServico/>} />
             </Routes>
           </div>
           <Footer />
         </BrowserRouter>
-      </AuthProvider>
-
+        </AuthProvider>
+    
     </>
-  );
+);
 }
 export default App;

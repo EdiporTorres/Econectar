@@ -7,8 +7,8 @@ import FormularioServico from './FormularioServico';
 function ModalServico() {
   return (
     <>
-      <Popup
-        trigger={<button className='btn-purple'>Cadastrar novo serviço</button>} modal>
+      <Popup 
+      trigger={<button className='border rounded px-5 py-3 bg-indigo-500 text-white'>Cadastrar novo serviço</button>} modal>
         <div>
           <FormularioServico />
         </div>

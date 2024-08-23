@@ -22,7 +22,7 @@ function FormularioServico() {
     descricao: '',
   });
 
-
+  
   const [servico, setServico] = useState({
     id: 0,
     nomeServico: '',
@@ -99,9 +99,9 @@ function FormularioServico() {
     navigate('/servico');
   }
 
-  async function gerarNovoServico(e: ChangeEvent<HTMLFormElement>) {
+   async function gerarNovoServico(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
-
+  
     // Construa o objeto JSON conforme o formato esperado
     const dadosServico = {
       id: servico.id || 0,
@@ -129,9 +129,9 @@ function FormularioServico() {
         descricao: servico.categoria?.descricao || '',
       },
     };
-
+  
     console.log('Dados do serviço:', dadosServico); // Adicione este log para verificar os dados
-
+  
     try {
       if (id != undefined) {
         await atualizar(`/servico/atualizar`, dadosServico, setServico, {
@@ -211,13 +211,12 @@ function FormularioServico() {
             type="number"
             placeholder="Valor"
             name="valor"
-            min={1}
             required
             className="border-2 border-slate-700 rounded p-2"
           />
         </div>
         <div className="flex flex-col gap-2">
-          <label htmlFor="sobreMim">Sobre o Vendedor: </label>
+          <label htmlFor="sobreMim">Sobre o mim: </label>
           <input
             value={servico.sobreMim}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
@@ -239,7 +238,7 @@ function FormularioServico() {
             ))}
           </select>
         </div>
-        <button type="submit" className="rounded disabled:bg-slate-200 btn-purple w-1/2 mx-auto block py-2">
+        <button type="submit" className="rounded disabled:bg-slate-200 bg-indigo-400 hover:bg-indigo-800 text-white font-bold w-1/2 mx-auto block py-2">
           {carregandoCategoria ? <span>Enviar</span> : id !== undefined ? 'Editar' : 'Cadastrar'}
         </button>
       </form>
