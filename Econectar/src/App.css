@@ -41,3 +41,53 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.card-footer {
+    display: flex;
+    border-top: 1px solid #1E3A8A; /* Linha de separação */
+  }
+  
+  .card-footer .btn {
+    flex: 1;
+    text-align: center;
+    padding: 8px;
+    color: white;
+  }
+
+.btn-primary {
+    background-color: rgb(255, 51, 0);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: rgb(224, 49, 5);
+}
+
+.btn-secondary {
+    background-color: rgb(20, 132, 186);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: rgb(18, 115, 163);
+}
+
+.btn-primary:hover, .btn-secondary:hover{
+    transform: scale(1.05);
+}
+
+.btn-purple {
+    border-radius: 0.375rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    background-color: #6366f1;
+    color: #ffffff;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn-purple:hover{
+    background-color: #4f46e5;
+}
